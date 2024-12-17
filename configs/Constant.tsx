@@ -1,6 +1,6 @@
 import { IsIPAD } from "@/theme/appConstant";
 import { OnboardingSlideType } from "@/types/configs/constantsTypes";
-import { Image } from "react-native";
+import { Dimensions, Image } from "react-native";
 import { verticalScale } from "react-native-size-matters";
 
 //import images
@@ -55,3 +55,12 @@ export const onBoardingSlides: OnboardingSlideType[] = [
         ),
     }
 ]
+
+// slider consts
+export const MIN_LEDGE = 25
+export const {width: WIDTH, height: HEIGHT} = Dimensions.get('window')
+export const MARGIN_WIDTH = MIN_LEDGE + 50
+export const PREV = WIDTH
+export const NEXT = 0
+export const LEFT_SNAP_POINT = [MARGIN_WIDTH, PREV]
+export const RIGHT_SNAP_POINT = [WIDTH - MARGIN_WIDTH, NEXT]
